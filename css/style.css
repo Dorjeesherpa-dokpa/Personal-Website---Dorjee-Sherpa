@@ -278,33 +278,34 @@ section {
 /* Prayer Flags Animation */
 .prayer-flags {
     position: absolute;
-    top: 20%;
-    left: -10%;
-    right: -10%;
-    height: 120px;
+    top: 15%;  /* Adjusted to be higher on the mountain */
+    left: 0;
+    right: 0;
+    height: 80px;  /* Slightly smaller height for better proportion */
     background: url('../Buddhist Prayer Flag.webp') repeat-x;
     background-size: auto 100%;
-    animation: waveFlags 15s linear infinite;
+    animation: waveFlags 8s ease-in-out infinite;
     z-index: 2;
     pointer-events: none;
-    opacity: 0.95;
+    opacity: 0.9;
+    transform-origin: center top;
 }
 
 @keyframes waveFlags {
     0% {
-        transform: translateX(0) rotate(0deg) translateY(0);
+        transform: translateX(0) skewY(0deg) translateY(0);
     }
     25% {
-        transform: translateX(-30px) rotate(3deg) translateY(-15px);
+        transform: translateX(-20px) skewY(-3deg) translateY(-10px);
     }
     50% {
-        transform: translateX(-50px) rotate(5deg) translateY(-25px);
+        transform: translateX(-35px) skewY(3deg) translateY(-15px);
     }
     75% {
-        transform: translateX(-30px) rotate(2deg) translateY(-15px);
+        transform: translateX(-15px) skewY(-2deg) translateY(-8px);
     }
     100% {
-        transform: translateX(0) rotate(0deg) translateY(0);
+        transform: translateX(0) skewY(0deg) translateY(0);
     }
 }
 
