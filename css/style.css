@@ -281,32 +281,22 @@ section {
     top: 10%;
     left: 0;
     right: 0;
-    height: 100px;
-    background: url('../Buddhist Prayer Flag.webp') repeat-x;
-    background-size: 100% 100%;
-    width: 100%;
-    animation: waveFlags 10s ease-in-out infinite;
+    height: 120px;
+    background: url('../Prayer Flag.png') repeat-x;
+    background-size: auto 100%;
+    width: 200%;  /* Make it wider for smooth scrolling */
+    animation: waveFlags 20s linear infinite;
     z-index: 3;
     pointer-events: none;
-    opacity: 0.95;
-    transform-origin: top left;
+    opacity: 0.9;
 }
 
 @keyframes waveFlags {
     0% {
-        transform: translateY(0) skew(0deg, 0deg);
-    }
-    25% {
-        transform: translateY(10px) skew(-5deg, 2deg);
-    }
-    50% {
-        transform: translateY(5px) skew(5deg, -2deg);
-    }
-    75% {
-        transform: translateY(15px) skew(-3deg, 1deg);
+        transform: translateX(0);
     }
     100% {
-        transform: translateY(0) skew(0deg, 0deg);
+        transform: translateX(-50%);  /* Move left by half the width for seamless loop */
     }
 }
 
