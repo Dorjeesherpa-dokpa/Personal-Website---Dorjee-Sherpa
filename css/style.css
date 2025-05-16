@@ -279,34 +279,34 @@ section {
 .prayer-flags {
     position: absolute;
     top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    width: 100vw;  /* Full viewport width */
     height: 120px;
-    width: 90%;
     background: url('../Prayer Flag.png') no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
     animation: floatingFlags 8s ease-in-out infinite;
     z-index: 3;
     pointer-events: none;
-    opacity: 0.95;
+    opacity: 1;  /* Full opacity for clear visibility */
     transform-origin: center;
+    mix-blend-mode: multiply;  /* This helps remove white background */
 }
 
 @keyframes floatingFlags {
     0% {
-        transform: translateX(-50%) translateY(0) rotate(0.5deg);
+        transform: translateY(0) rotate(0.5deg);
     }
     25% {
-        transform: translateX(-50%) translateY(-5px) rotate(-0.5deg);
+        transform: translateY(-5px) rotate(-0.5deg);
     }
     50% {
-        transform: translateX(-50%) translateY(-8px) rotate(0.8deg);
+        transform: translateY(-8px) rotate(0.8deg);
     }
     75% {
-        transform: translateX(-50%) translateY(-3px) rotate(-0.3deg);
+        transform: translateY(-3px) rotate(-0.3deg);
     }
     100% {
-        transform: translateX(-50%) translateY(0) rotate(0.5deg);
+        transform: translateY(0) rotate(0.5deg);
     }
 }
 
