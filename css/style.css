@@ -277,19 +277,20 @@ section {
 
 /* Prayer Flags Animation */
 .prayer-flags {
-    position: absolute;
-    top: 10%;
+    position: fixed;  /* Changed to fixed for better positioning */
+    top: 8%;
     left: 0;
-    width: 100vw;  /* Full viewport width */
-    height: 120px;
-    background: url('../Prayer Flag.png') no-repeat;
-    background-size: contain;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background: url('../Prayer Flag.png') no-repeat center;
+    background-size: cover;  /* Changed to cover for full width coverage */
     animation: floatingFlags 8s ease-in-out infinite;
     z-index: 3;
     pointer-events: none;
-    opacity: 1;  /* Full opacity for clear visibility */
+    opacity: 1;
+    mix-blend-mode: multiply;  /* Removes white background */
     transform-origin: center;
-    mix-blend-mode: multiply;  /* This helps remove white background */
 }
 
 @keyframes floatingFlags {
