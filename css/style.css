@@ -279,34 +279,34 @@ section {
 .prayer-flags {
     position: absolute;
     top: 10%;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 120px;
-    background: url('../Prayer Flag.png') repeat-x;
-    background-size: contain;
-    width: 100%;
-    animation: waveFlags 6s ease-in-out infinite;
+    width: 90%;
+    background: url('../Prayer Flag.png') no-repeat;
+    background-size: 100% 100%;
+    animation: floatingFlags 8s ease-in-out infinite;
     z-index: 3;
     pointer-events: none;
     opacity: 0.95;
-    transform-origin: left;
+    transform-origin: center;
 }
 
-@keyframes waveFlags {
+@keyframes floatingFlags {
     0% {
-        transform: rotate(0deg) translateY(0);
+        transform: translateX(-50%) translateY(0) rotate(0.5deg);
     }
     25% {
-        transform: rotate(4deg) translateY(-20px);
+        transform: translateX(-50%) translateY(-5px) rotate(-0.5deg);
     }
     50% {
-        transform: rotate(-3deg) translateY(-15px);
+        transform: translateX(-50%) translateY(-8px) rotate(0.8deg);
     }
     75% {
-        transform: rotate(3deg) translateY(-25px);
+        transform: translateX(-50%) translateY(-3px) rotate(-0.3deg);
     }
     100% {
-        transform: rotate(0deg) translateY(0);
+        transform: translateX(-50%) translateY(0) rotate(0.5deg);
     }
 }
 
