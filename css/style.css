@@ -278,12 +278,12 @@ section {
 /* Prayer Flags Animation */
 .prayer-flags {
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     right: 0;
     height: 100px;
     background: url('../Buddhist Prayer Flag.webp') repeat-x;
-    background-size: 100% 100%;  /* This will stretch the image across the full width */
+    background-size: 100% 100%;
     width: 100%;
     animation: waveFlags 10s ease-in-out infinite;
     z-index: 3;
