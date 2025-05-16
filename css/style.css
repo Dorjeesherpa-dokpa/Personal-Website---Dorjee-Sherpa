@@ -283,20 +283,30 @@ section {
     right: 0;
     height: 120px;
     background: url('../Prayer Flag.png') repeat-x;
-    background-size: auto 100%;
-    width: 200%;  /* Make it wider for smooth scrolling */
-    animation: waveFlags 20s linear infinite;
+    background-size: contain;
+    width: 100%;
+    animation: waveFlags 6s ease-in-out infinite;
     z-index: 3;
     pointer-events: none;
-    opacity: 0.9;
+    opacity: 0.95;
+    transform-origin: left;
 }
 
 @keyframes waveFlags {
     0% {
-        transform: translateX(0);
+        transform: rotate(0deg) translateY(0);
+    }
+    25% {
+        transform: rotate(4deg) translateY(-20px);
+    }
+    50% {
+        transform: rotate(-3deg) translateY(-15px);
+    }
+    75% {
+        transform: rotate(3deg) translateY(-25px);
     }
     100% {
-        transform: translateX(-50%);  /* Move left by half the width for seamless loop */
+        transform: rotate(0deg) translateY(0);
     }
 }
 
